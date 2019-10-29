@@ -38,7 +38,7 @@ setup(
     url='https://pypi.python.org/pypi/imio.config.vocabulary',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['imio', 'config'],
+    namespace_packages=['imio', 'imio.config'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,

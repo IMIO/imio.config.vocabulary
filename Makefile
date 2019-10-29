@@ -31,7 +31,7 @@ bin/templates: setup.py buildout.cfg
 	touch $@
 
 test: bin/test
-	bin/test -s imio.schedule $(options)
+	bin/test -s imio.config.vocabulary $(options)
 
 instance: bin/instance
 	bin/instance fg
