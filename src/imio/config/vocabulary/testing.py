@@ -15,7 +15,7 @@ import transaction
 
 import unittest
 
-import imio.schedule
+import imio.config.vocabulary
 
 
 class NakedPloneLayer(PloneSandboxLayer):
@@ -25,15 +25,13 @@ class NakedPloneLayer(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         """Set up Zope."""
         # Load ZCML
-        self.loadZCML(package=imio.schedule,
+        self.loadZCML(package=imio.config.vocabulary,
                       name='testing.zcml')
         # need to do this for archetypes products having 'initialize'
         # method for their content types in their __init__.py
-        z2.installProduct(app, 'imio.dashboard')
 
     def tearDownZope(self, app):
         """Tear down Zope."""
-        z2.uninstallProduct(app, 'imio.dashboard')
 
 
 NAKED_PLONE_FIXTURE = NakedPloneLayer(
@@ -50,7 +48,7 @@ class ConfigVocabularyLayer(NakedPloneLayer):
 
     def setUpPloneSite(self, portal):
         applyProfile(portal, 'Products.CMFPlone:plone')
-        applyProfile(portal, 'imio.schedule:default')
+        applyProfile(portal, 'imio.config.vocabulary:default')
 
         # Login and create some test content
         setRoles(portal, TEST_USER_ID, ['Manager'])

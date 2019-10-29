@@ -2,6 +2,6 @@
 <registry xmlns:i18n="http://xml.zope.org/namespaces/i18n"
           i18n:domain="plone">
 
-    <records interface="imio.config.vocabulary.interfaces.IVocabularies" purge="False">
+    <records interface="imio.config.vocabulary.interfaces.IImioConfigVocabularies" purge="False">
     </records>
 </registry>
