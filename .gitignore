@@ -1,0 +1,11 @@
+*.py?
+*.mo
+*.egg-info
+bin/*
+lib/*
+develop-eggs/
+include/
+parts/
+var/
+pip-selfcheck.json
+setup.cfg
